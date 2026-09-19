@@ -47,7 +47,7 @@ const panels = [
   "SCROFULOUS/splitShortCORPSE",
 ];
 
-for (const gateName of panels) {
+function drawMap(gateName) {
   const id = gateName.replace(/\//g, "_");
   QTool.createFidelityMap({
     target: document.getElementById(id),
@@ -63,13 +63,13 @@ for (const gateName of panels) {
     },
     colorBar: gateName === panels[2] || gateName === panels[5],
     padding: { top: 20, bottom: 100, left: 100, right: 20 },
-    labelFont: "26px serif",
-    ticsFont: "26px serif",
+    labelFont: "29px serif",
+    ticsFont: "29px serif",
     labelMargin: { ple: 60, ore: 52 },
     ticsMargin: { ple: 8, ore: 8, colorBar: 8 },
     colorBarWidth: 28,
     colorBarMargin: { left: 20, right: 100 },
-    colorBarTicsFont: "26px serif",
+    colorBarTicsFont: "29px serif",
     download: id + "-fidelity.png",
   });
 
@@ -78,3 +78,26 @@ for (const gateName of panels) {
   link.title = "Download PNG";
   link.setAttribute("aria-label", "Download " + gateName + " as PNG");
 }
+
+
+const yieldToPaint = () => new Promise(resolve => {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(resolve);
+  });
+});
+
+
+let message = document.getElementById("message");
+
+async function drawAllMaps() {
+  for (let i = 0; i < panels.length; i++) {
+    message.textContent =
+      `Computing fidelity map ${i + 1} of ${panels.length}...`;
+    await yieldToPaint();
+    drawMap(panels[i]);
+  }
+  message.textContent = "Fidelity maps are ready. Click each map to download it.";
+}
+
+
+drawAllMaps();

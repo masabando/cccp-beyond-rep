@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,28 +13,99 @@
     }
   </script>
   <style>
-    body { margin: 24px; background: white; color: black; font-family: serif; }
-    main { display: grid; grid-template-columns: 520fr 520fr 668fr; gap: 24px 8px; max-width: 1200px; margin: auto; }
-    figure { margin: 0; min-width: 0; }
-    figure div { font-size: 0; }
-    canvas { display: block; width: 100%; height: auto; }
-    figcaption { text-align: center; font-size: 16px; overflow-wrap: anywhere; margin-top: 8px; }
+    body {
+      margin: 24px;
+      background: white;
+      color: black;
+      font-family: serif;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 520fr 520fr 668fr;
+      gap: 24px 8px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    figure {
+      margin: 0;
+      min-width: 0;
+    }
+
+    figure div {
+      font-size: 0;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      text-align: center;
+      font-size: 16px;
+      overflow-wrap: anywhere;
+      margin-top: 8px;
+    }
+
+    #message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      padding: 20px 0;
+    }
     @media (max-width: 640px) {
-      body { margin: 12px; }
-      main { grid-template-columns: 1fr; }
-      figure { width: 100%; max-width: 520px; margin: auto; }
+      body {
+        margin: 12px;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      figure {
+        width: 100%;
+        max-width: 520px;
+        margin: auto;
+      }
     }
   </style>
 </head>
+
 <body>
+  <div id="message">
+    Computing fidelity maps...
+  </div>
   <main>
-    <figure><div id="CORPSE_BB1"></div><figcaption>(a) CORPSE/BB1</figcaption></figure>
-    <figure><div id="shortCORPSE_BB1"></div><figcaption>(b) shortCORPSE/BB1</figcaption></figure>
-    <figure><div id="shortCORPSE_splitBB1"></div><figcaption>(c) shortCORPSE/splitBB1</figcaption></figure>
-    <figure><div id="SCROFULOUS"></div><figcaption>(d) SCROFULOUS</figcaption></figure>
-    <figure><div id="splitShortCORPSE"></div><figcaption>(e) splitShortCORPSE</figcaption></figure>
-    <figure><div id="SCROFULOUS_splitShortCORPSE"></div><figcaption>(f) SCROFULOUS/splitShortCORPSE</figcaption></figure>
+    <figure>
+      <div id="CORPSE_BB1"></div>
+      <figcaption>(a) CORPSE/BB1</figcaption>
+    </figure>
+    <figure>
+      <div id="shortCORPSE_BB1"></div>
+      <figcaption>(b) shortCORPSE/BB1</figcaption>
+    </figure>
+    <figure>
+      <div id="shortCORPSE_splitBB1"></div>
+      <figcaption>(c) shortCORPSE/splitBB1</figcaption>
+    </figure>
+    <figure>
+      <div id="SCROFULOUS"></div>
+      <figcaption>(d) SCROFULOUS</figcaption>
+    </figure>
+    <figure>
+      <div id="splitShortCORPSE"></div>
+      <figcaption>(e) splitShortCORPSE</figcaption>
+    </figure>
+    <figure>
+      <div id="SCROFULOUS_splitShortCORPSE"></div>
+      <figcaption>(f) SCROFULOUS/splitShortCORPSE</figcaption>
+    </figure>
   </main>
   <script type="module" src="./main.js"></script>
 </body>
+
 </html>

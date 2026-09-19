@@ -3,7 +3,19 @@
 This directory generates the six fidelity-map panels for
 "Concatenated Composite Pulses Beyond Local Residual-Error Preservation".
 
-## Requirements and execution
+## Run in your browser
+
+[Open the interactive reproduction page](https://masabando.github.io/cccp-beyond-rep/)
+to generate the six fidelity maps. Once generated, click each map to download
+it as a PNG. No local installation is required.
+
+The hosted page may change as the repository is updated. For the fixed version
+used by the manuscript, use [v1.0.1](https://github.com/masabando/cccp-beyond-rep/tree/v1.0.1)
+and follow the local execution instructions below. This release enlarges figure
+labels and adds progress messages; the calculation conditions are unchanged
+from v1.0.0.
+
+## Requirements and local execution
 
 Use a current browser with JavaScript modules, import maps, and Canvas support.
 An internet connection is required to load the version-pinned library from
