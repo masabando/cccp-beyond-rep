@@ -1,7 +1,8 @@
 # Reproducing Figure 1
 
 This directory generates the six fidelity-map panels for
-"Concatenated Composite Pulses Beyond Local Residual-Error Preservation".
+["Concatenated Composite Pulses Beyond Local Residual-Error Preservation"](https://arxiv.org/abs/2609.22728)
+by Masamitsu Bando, arXiv:2609.22728 (2026).
 
 ## Run in your browser
 
@@ -136,6 +137,7 @@ the MIT License; see LICENSE. The quantum-gates library has its own MIT
 license and copyright notice.
 
 If this code contributes to your research, please cite the associated work
-by Masamitsu Bando, "Concatenated Composite Pulses Beyond Local
-Residual-Error Preservation". Publication details will be added when
-available. This citation request is not an additional license condition.
+by Masamitsu Bando, ["Concatenated Composite Pulses Beyond Local
+Residual-Error Preservation"](https://arxiv.org/abs/2609.22728),
+arXiv:2609.22728 (2026). This citation request is not an additional
+license condition.
